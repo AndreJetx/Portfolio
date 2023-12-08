@@ -1,77 +1,128 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: black;
+    color: rgb(102, 207, 3);
 }
 
-header {
+nav {
     align-items: center;
-    background-color: #333;
-    color: #fff;
+    color: rgb(102, 207, 3);
     position: fixed;
     width: 100%;
     top: 0;
-    transition: background-color 0.5s ease;
-    opacity: 0.9;
     z-index: 1000;
-    height: 80px;
 }
 
 .cabecalho {
+    color: rgb(102, 207, 3); ;
     padding: 10px;
-    border: solid;
     margin: 0 120px 0 120px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     height: 80px;
+    justify-content: space-between;
+}
+
+
+.cabecalho-nome{
+    font-family: 'Play', sans-serif;
+    text-decoration: none;
+    color: rgb(102, 207, 3);
+    font-size: 35px;
 }
 
 .cabecalho-menu ul {
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 3px;
+  display: flex;
+  height: 80px;
+}
+
+.cabecalho-menu li{
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+}
+
+.cabecalho-menu li, .cabecalho-menu li a {
+  display: flex;
+  transition: border-bottom 0.3s;
+  color: rgb(102, 207, 3);
+  margin: 5px;
+  position: relative;
+}
+
+.cabecalho-menu li:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background-color: transparent; 
+  transition: background-color 0.3s;
+}
+
+.cabecalho-menu li:hover:after {
+  background-color: rgb(102, 207, 3);
+  width: 110%;
+}
+
+/*////////// Redes sociais //////////////*/
+
+.lista-redes-sociais {
+    display: flex;
     align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 3px;
-    display: flex;
-    gap: 16px;
-    height: 80px;
-}
+    justify-content: center;
+    gap: 10px;
+  }
 
-.cabecalho-menu a {
-    text-decoration: none;
-    color: #fff;
-    position: relative;
-    display: inline-block;
-    transition: color 0.3s;
-}
-
-.cabecalho-menu a:after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: -32px;
-    left: 0;
-    width: 100%;
-    height: 2px; /* Ajuste conforme necessário */
-    background-color: transparent;
-    transition: width 0.3s, background-color 0.3s;
-}
-
-.cabecalho-menu a:hover:after {
-    width: 100%;
-    background-color: #ddd;
-}
-
-.cabecalho-redes-sociais ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.cabecalho-redes-sociais li {
-    margin-right: 10px;
-}
-
-.icones-redes-sociais {
-    max-height: 30px;
-}
+  
+  .lista-redes-sociais svg {
+    margin-top: 0.3rem;
+    transition: 300ms;
+  }
+  
+  .lista-redes-sociais svg:hover {
+    margin-top: 0;
+    margin-bottom: 0.3rem;
+  }
+  
+  body .lista-redes-sociais li svg path {
+    transition: 200ms;
+  }
+  
+  body nav#navigation .lista-redes-sociais li:nth-child(1) svg:hover path,
+  body .lista-redes-sociais li:nth-child(1) svg:hover path {
+    stroke: #ff377a;
+  }
+  
+  body .lista-redes-sociais li:nth-child(2) svg:hover path:nth-child(2),
+  body nav#navigation .lista-redes-sociais li:nth-child(2) svg:hover path:nth-child(2) {
+    fill: #fff;
+  }
+  
+  body.light-mode .lista-redes-sociais li:nth-child(2) svg:hover path:nth-child(2),
+  body.light-mode
+    nav#navigation
+    .lista-redes-sociais
+    li:nth-child(2)
+    svg:hover
+    path:nth-child(2) {
+    fill: #000;
+  }
+  
+  body .lista-redes-sociais li:nth-child(3) svg:hover path:nth-child(2),
+  body nav#navigation .lista-redes-sociais li:nth-child(3) svg:hover path:nth-child(2) {
+    fill: #0a66c2;
+  }
+  
+  body .lista-redes-sociais li:nth-child(4) svg:hover path:nth-child(2),
+  body nav#navigation .lista-redes-sociais li:nth-child(4) svg:hover path:nth-child(2) {
+    fill: #00abf0;
+  }
