@@ -15,6 +15,7 @@ nav {
 }
 
 .cabecalho {
+<<<<<<< HEAD
   font-weight: 700;
   padding: 10px;
   margin: 0 120px 0 120px;
@@ -22,6 +23,15 @@ nav {
   align-items: center;
   height: 80px;
   justify-content: space-between;
+=======
+    font-weight: 700;
+    padding: 10px;
+    margin: 0 120px 0 120px;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    justify-content: space-between;
+>>>>>>> 83c056c05829b013e6b66fb1654d3729c7119cda
 }
 
 
@@ -138,12 +148,21 @@ body nav#navigation .lista-redes-sociais li:nth-child(4) svg:hover path:nth-chil
 /*////////// Home //////////////*/
 
 .home{
+<<<<<<< HEAD
 display: flex;
 padding-top: 82px;
 height: 100vh;
 align-items: center;
 margin: 0 175px 0 175px;
 justify-content: space-between;
+=======
+  display: flex;
+  padding-top: 82px;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 175px 0 175px;
+>>>>>>> 83c056c05829b013e6b66fb1654d3729c7119cda
 }
 
 .linha {
@@ -216,6 +235,7 @@ color: white;
 }
 
 .imagem-home{
+<<<<<<< HEAD
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 grid-template-rows: repeat(2, 1fr);
@@ -254,11 +274,16 @@ gap: 10px;
       transform: translateY(0);
       opacity: 1;
   }
+=======
+  display: flex;
+  max-width: 400px;
+>>>>>>> 83c056c05829b013e6b66fb1654d3729c7119cda
 }
 
 /*/////// animaçao digitaçao ///////*/
 
 .linha {
+<<<<<<< HEAD
 font-size: 24px;
 line-height: 30px;
 letter-spacing: 0.1em;
@@ -318,3 +343,38 @@ to { width: 100%; }
 .descricao-sobre-mim{
   padding-right: 200px;
 }
+=======
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.1em;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.linha:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: rgb(44, 99, 250);
+  animation: blink 0.8s step-start infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.digitando {
+  animation: digitar 2s steps(49) 1s 1 normal both,
+              fadout 0.5s 6s both;
+}
+
+@keyframes digitar {
+  from { width: 0; }
+  to { width: 100%; }
+}
+>>>>>>> 83c056c05829b013e6b66fb1654d3729c7119cda
