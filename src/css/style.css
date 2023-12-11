@@ -15,6 +15,7 @@ nav {
 }
 
 .cabecalho {
+    font-weight: 700;
     padding: 10px;
     margin: 0 120px 0 120px;
     display: flex;
@@ -141,7 +142,7 @@ nav {
   height: 100vh;
   align-items: center;
   justify-content: space-between;
-  margin: 0 350px 0 350px;
+  margin: 0 175px 0 175px;
 }
 
 .linha {
@@ -210,4 +211,46 @@ nav {
   background: rgb(44, 99, 250);
   color: white;
 
+}
+
+.imagem-home{
+  display: flex;
+  max-width: 400px;
+}
+
+/*/////// animaçao digitaçao ///////*/
+
+.linha {
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.1em;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.linha:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: rgb(44, 99, 250);
+  animation: blink 0.8s step-start infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.digitando {
+  animation: digitar 2s steps(49) 1s 1 normal both,
+              fadout 0.5s 6s both;
+}
+
+@keyframes digitar {
+  from { width: 0; }
+  to { width: 100%; }
 }
