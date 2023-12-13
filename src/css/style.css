@@ -260,6 +260,16 @@ body nav#navigation .lista-redes-sociais li:nth-child(3) svg:hover path:nth-chil
   animation-delay: 2s;
 }
 
+.imagem-home img {
+  margin-top: 0.3rem;
+  transition: 300ms;
+}
+
+.imagem-home img:hover {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+}
+
 @keyframes entrar {
   0% {
     transform: translateY(-3.125rem);
@@ -326,15 +336,71 @@ body nav#navigation .lista-redes-sociais li:nth-child(3) svg:hover path:nth-chil
   max-width: max-content;
   max-height: 45rem;
   padding: 5rem 5rem;
+  border-radius: 20%;
+}
+
+.descricao-sobre-mim{
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding-right: 5rem;
 }
 
 .sobre-mim p{
   font-family: 'Play', sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   color: white;
   text-align: justify;
+  font-size: 1.2rem;
 }
 
-.descricao-sobre-mim{
-  padding-right: 5rem;
+.sobre-mim h1{
+  font-family: 'Play', sans-serif;
+  font-weight: 700;
+  text-align: justify;
+  font-size: 2rem;
 }
+
+
+/*/////// PROJETOS /////////////////////////*/
+.projetos {
+  display: flex;
+  padding: 8.1rem 1.25rem ;
+  align-items: center;
+  justify-content: center;
+}
+
+.projetos header{
+  text-align: center;
+}
+
+
+.projetos header{
+  margin-bottom: 6rem;
+}
+
+.projetos header h2{
+  margin-bottom: 1.6rem;
+}
+
+.cards-projetos {
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 3.2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img{
+    max-width: 15rem;
+}
+
+
