@@ -5,7 +5,7 @@ html {
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.925);
   color: rgba(0, 132, 255, 0.616);
 }
 
@@ -29,9 +29,14 @@ nav {
   width: 100%;
   top: 0;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.8); /* Adiciona um fundo preto com transparência */
-  backdrop-filter: blur(5px); /* Aplica um desfoque ao fundo */
+  background-color: transparent;  
+}
+
+.nav.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px); 
   -webkit-backdrop-filter: blur(5px);
+  color: rgb(196, 222, 245);
 }
 
 .cabecalho {
@@ -166,7 +171,6 @@ body nav#navigation .lista-redes-sociais li:nth-child(3) svg:hover path:nth-chil
 .linha {
   overflow: hidden;
   white-space: nowrap;
-  border-right: 0.125rem solid #000;
   font-size: 1.5rem;
   display: inline-block;
   margin: 0;
@@ -365,56 +369,78 @@ body nav#navigation .lista-redes-sociais li:nth-child(3) svg:hover path:nth-chil
 /*/////// PROJETOS /////////////////////////*/
 .projetos {
   display: flex;
-  padding: 8.1rem 1.25rem ;
+  padding: 7.1rem 6.25rem ;
   align-items: center;
   justify-content: center;
 }
 
 .projetos header{
+  justify-content: center;
   text-align: center;
-}
-
-
-.projetos header{
   margin-bottom: 6rem;
 }
 
+
 .projetos header h2{
+  font-family: 'Play', sans-serif; ;
+  font-size: 2rem;
+  font-weight: 700;
   margin-bottom: 1.6rem;
 }
 
-.cards-projetos {
+.projetos .cards-projetos {
+  
   align-items: center;
   justify-content: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 3.2rem;
+  gap: 1.2rem;
 }
 
-.card {
+.projetos .card {
+  height: 100%;
   padding: 4rem;
-  background: hsl(0, 0%, 8%);
+  background: rgba(0, 0, 0, 0.356);
   border-radius: 0.6rem;
-  box-shadow: -1rem 1rem 1rem rgba(0, 0, 0, 0.267);
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   gap: 2.5rem;
   transition: 400ms;
+  color: white;
 }
 
-.card .img-overlay{
+.projetos .card .img-overlay{
   width: 100%;
   position: relative;
 }
 
-.card img{
+.projetos .card img{
   width: 100%;
-  max-width: 20rem;
-  height: 20rem;
+  height: 15rem;
   object-fit: cover;
   border-radius: 0.6rem;  
+}
+
+.projetos .card p{
+  text-align: center;
+  object-fit: cover;
+  border-radius: 0.6rem;  
+}
+
+.projetos .card h3{
+  min-height: 3rem;
+  text-align: center;
+}
+
+.em-breve p{
+  font-size: 1.25rem ;
+  gap: 1rem
+}
+
+
+.card:hover {
+  background: rgba(68, 68, 68, 0.89)
 }
 
 .card:hover > .img-overlay img {
@@ -477,9 +503,19 @@ body nav#navigation .lista-redes-sociais li:nth-child(3) svg:hover path:nth-chil
 }
 
 .card:nth-child(8) svg path:nth-child(2) {
-  fill: var(--paragraph);
+  fill: #fff;
 }
 
 .button {
   margin: 6rem auto 0;
+}
+
+
+/*/////// CONHECIMENTOS ///////////////////////////*/
+
+.conhecimentos {
+    display: flex;
+    background-color: rgb(43, 43, 43);
+    align-items: center;
+    justify-content: space-between;
 }
