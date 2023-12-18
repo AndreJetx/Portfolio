@@ -515,7 +515,84 @@ body nav#navigation .lista-redes-sociais li:nth-child(3) svg:hover path:nth-chil
 
 .conhecimentos {
     display: flex;
+    padding: 7.1rem 6.25rem ;
     background-color: rgb(43, 43, 43);
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
+
+.conhecimentos header{
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+
+.conhecimentos header h2{
+  font-family: 'Play', sans-serif; ;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.conhecimentos .cards-conhecimentos {
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.conhecimentos .card {
+  height: 100%;
+  padding: 4rem;
+  background: rgba(0, 0, 0, 0.356);
+  border-radius: 0.6rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5rem;
+  transition: 400ms;
+  color: white;
+}
+
+.conhecimentos .card img{
+  max-width: 4rem;
+  height: 3rem;
+}
+
+.conhecimentos .card p{
+  text-align: center;
+}
+
+.conhecimentos .card p span{
+  color: rgba(238, 255, 0, 0.89);
+}
+
+.conhecimentos .card p .span-conhecimentos{
+  color: rgba(21, 255, 0, 0.952) ;
+}
+
+.conhecimentos .card:hover {
+  background: rgba(0, 0, 0, 0.651);
+}
+
+/*/////// CONTATO ///////////////////////////*/
+
+.contato {
+  display: flex;
+  padding: 7.1rem 6.25rem ;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+#contato a{
+  color: gray  ;
+}
+
+.contato .button-contato:hover .svg-container path {
+  fill: white;
+}
+
