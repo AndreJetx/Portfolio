@@ -1,6 +1,6 @@
 :root {
-  --primary-color: hsl(90, 92%, 43%);
-  --primary-hover: hsl(90, 92%, 33%);
+  --primary-color: rgb(44, 99, 250);
+  --primary-hover: rgba(0, 132, 255, 0.616);
   --secundary-color: hsl(0, 0%, 5%);
   --third-color: hsla(0, 0%, 100%, 0.1);
   --bg-color: hsl(0, 0%, 8%);
@@ -77,7 +77,7 @@ section h4 {
   font-weight: 700;
   line-height: 150%;
   letter-spacing: 0.08rem;
-  color: var(--primary-color);
+  color: rgb(44, 99, 250);
   text-transform: uppercase;
   margin-bottom: 1.6rem;
 }
@@ -86,7 +86,7 @@ section header h2 {
   font-size: 3rem;
   line-height: 3.9rem;
 
-  color: var(--primary-color);
+  color: rgb(44, 99, 250);
 }
 
 section h3 {
@@ -104,14 +104,14 @@ section span {
 
 .button {
   background: none;
-  border: 0.2rem solid var(--primary-color);
+  border: 0.2rem solid rgb(44, 99, 250);
 
   margin-bottom: 6rem;
   padding: 1.4rem 3rem;
 
   width: fit-content;
 
-  color: var(--primary-color);
+  color: rgb(44, 99, 250);
   font-size: 1.4rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -134,8 +134,8 @@ body.light-mode #home h4 {
 
 .button:hover {
   color: #fff;
-  background-color: var(--primary-hover);
-  border: 0.2rem solid var(--primary-hover);
+  background-color: rgba(0, 132, 255, 0.616);
+  border: 0.2rem solid rgba(0, 132, 255, 0.616);
   cursor: pointer;
 }
 
@@ -144,7 +144,6 @@ body.light-mode .button:hover {
 }
 
 nav {
-  border: solid;
   width: 100%;
   height: 7.2rem;
   display: flex;
@@ -170,16 +169,6 @@ nav .wrapper{
 body.light-mode nav.scroll {
   background: rgba(151, 151, 151, 0.5);
 }
-
-/*.wrapper {
-  font-weight: 700;
-  padding: 0.625rem;
-  margin: 0 7.5rem 0 7.5rem;
-  display: flex;
-  align-items: center;
-  height: 5rem;
-  justify-content: space-between;
-}*/
 
 .cabecalho-nome {
   font-family: 'Play', sans-serif;
@@ -246,12 +235,12 @@ body.light-mode nav.scroll {
 }
 
 #backToTopButton circle {
-  fill: var(--primary-color);
+  fill: rgb(44, 99, 250);
 }
 
 #contact li path,
 #navigation button.open-menu path[stroke*="#00856F"] {
-  stroke: var(--primary-color);
+  stroke: rgb(44, 99, 250);
 }
 
 #navigation.scroll button.open-menu path[stroke*="#00856F"] {
@@ -381,11 +370,11 @@ body.menu-expanded button path {
 
 .home {
   display: flex;
+  flex-direction: column;
   padding-top: 72px;
-  height: 100vh;
   min-height: calc(60rem + 7.2rem);
   align-items: center;
-  justify-content: space-between;
+
 }
 
 .home .wrapper{
@@ -473,7 +462,7 @@ body.menu-expanded button path {
 }
 
 .imagem-escp {
-  max-width: 100%; 
+  max-width: 10rem; 
   height: auto;
   opacity: 0;
   animation: entrar 1.5s ease-out forwards;
@@ -558,9 +547,7 @@ body.menu-expanded button path {
 }
 
 .img-eu{
-  max-width: max-content;
-  max-height: 45rem;
-  padding: 5rem 5rem;
+  max-width: 100%;
   border-radius: 20%;
   transition: 600ms;
 }
@@ -569,7 +556,6 @@ body.menu-expanded button path {
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  padding-right: 5rem;
 }
 
 .sobre-mim p{
@@ -577,14 +563,15 @@ body.menu-expanded button path {
   font-weight: 400;
   color: white;
   text-align: justify;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  margin-bottom: 5rem;
 }
 
 .sobre-mim h1{
   font-family: 'Play', sans-serif;
   font-weight: 700;
   text-align: justify;
-  font-size: 2rem;
+  font-size: 3rem;
   color: rgb(44, 99, 250)
 }
 
@@ -605,7 +592,7 @@ body.menu-expanded button path {
 
 .projetos header h2{
   font-family: 'Play', sans-serif; ;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1.6rem;
 }
@@ -737,7 +724,7 @@ body.menu-expanded button path {
 
 .conhecimentos {
     display: flex;
-    padding: 7.1rem 6.25rem ;
+    padding: 7.1rem 2rem ;
     background-color: rgb(43, 43, 43);
     align-items: center;
     justify-content: center;
@@ -752,7 +739,7 @@ body.menu-expanded button path {
 
 .conhecimentos header h2{
   font-family: 'Play', sans-serif; ;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1.6rem;
 }
@@ -761,7 +748,7 @@ body.menu-expanded button path {
   align-items: center;
   justify-content: center;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 1.2rem;
 }
 
@@ -810,7 +797,8 @@ body.menu-expanded button path {
 
 .contato-colunas{
   display: flex;
-  gap: 10rem;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contato .contato-col-a,
@@ -849,16 +837,15 @@ body.menu-expanded button path {
 }
 
 .contato-col-b img{
-  width: 20rem;
-  border-radius: 10%;
-  opacity: 0.6;
+ width: 100%;
+ opacity: 0.5;
+ border-radius: 20%;
 }
 
 /*===== FOOTER ===============================================*/
 
 footer {
   background-color: var(--secundary-color);
-
   text-align: left;
   color: var(--paragraph);
 }
@@ -873,34 +860,24 @@ footer .logo {
   margin-bottom: 2.4rem;
   opacity: 0.6;
 }
-
-footer a img:nth-child(2),
-body.light-mode footer a img:nth-child(1) {
-  display: none;
-}
-
-body.light-mode footer a img:nth-child(2) {
-  display: initial;
-}
-
 footer p {
   line-height: 2;
 
   margin-bottom: 3.2rem;
 }
 
-footer .social-links {
+footer .lista-redes-sociais {
   justify-content: flex-start;
 }
 
-footer .social-links li:nth-child(1) svg path {
-  stroke: var(--paragraph-2);
+footer .lista-redes-sociais li:nth-child(1) svg path {
+  stroke: white;
 }
 
-footer .social-links li:nth-child(2) svg path:nth-child(2),
-footer .social-links li:nth-child(3) svg path:nth-child(2),
-footer .social-links li:nth-child(4) svg path:nth-child(2) {
-  fill: var(--paragraph-2);
+footer .lista-redes-sociais li:nth-child(2) svg path:nth-child(2),
+footer .lista-redes-sociais li:nth-child(3) svg path:nth-child(2),
+footer .lista-redes-sociais li:nth-child(4) svg path:nth-child(2) {
+  fill: white;
 }
 
 /*===== SWITCH MODE TOGGLE =====================================*/
@@ -923,7 +900,7 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
   height: 4rem;
 
   background-color: var(--secundary-color);
-  border: 0.1rem solid var(--primary-color);
+  border: 0.1rem solid rgb(44, 99, 250);
   border-radius: 5rem;
 
   display: flex;
@@ -942,7 +919,7 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
   width: 3rem;
   height: 3rem;
 
-  background-color: var(--primary-color);
+  background-color: rgb(44, 99, 250);
   border-radius: 50%;
 
   position: absolute;

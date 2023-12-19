@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var nav = document.querySelector(".nav");
     var scrollPosition = window.scrollY;
   
-    if (scrollPosition > 100) {
+    if (scrollPosition > 10) {
       nav.classList.add("scrolled");
     } else {
       nav.classList.remove("scrolled");
