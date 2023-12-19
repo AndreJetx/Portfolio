@@ -584,15 +584,50 @@ body nav#navigation .lista-redes-sociais li:nth-child(3) svg:hover path:nth-chil
   padding: 7.1rem 6.25rem ;
   align-items: center;
   justify-content: center;
+}
+
+.contato-colunas{
+  display: flex;
+  gap: 10rem;
+}
+
+.contato .contato-col-a,
+.contato .contato-col-a div{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 
 
+.contato .contato-col-a li{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.contato .contato-col-a li p{
+  padding-left: 1rem;
+}
+
+.contato header{
+  font-family: 'Play', sans-serif;
+  font-size: 1.5rem;
 }
 
 #contato a{
-  color: gray  ;
+  display: flex;
+  align-items: center;
+  color: rgb(156, 156, 156)  ;
 }
 
-.contato .button-contato:hover .svg-container path {
+.contato .button-contato:hover .svg-container path,
+.contato .button-contato:hover h3 {
   fill: white;
+  color: white;
 }
 
+.contato-col-b img{
+  width: 20rem;
+  border-radius: 10%;
+  opacity: 0.6;
+}
