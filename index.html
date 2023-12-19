@@ -17,7 +17,7 @@
 <body>
     <nav id="navegacao" class="nav">
         
-        <Div class="cabecalho">
+        <Div class="wrapper">
             <a class="cabecalho-nome" href="#home">AndreJuan</a>
                             
                 <div class="cabecalho-menu">
@@ -64,13 +64,14 @@
     </nav>
     
     <section id="home" class="home">
+        <div class="wrapper">
             <div class="apresentacao">
                 <header>
                     <h4>Hello world 👋🏾</h4>
                     <h1>Eu sou o André</h1>
                 </header>
                 <div class="apresentacao-1">
-                    <p class="linha digitando">Desenvolvedor Web Front-end</p>
+                    <p class="linha digitando">Desenvolvedor Web Front-end.</p>
                     <a class="button-contato" href="#contato">Fale Comigo</a>
                 </div>
             </div>
@@ -81,25 +82,27 @@
                 <img class="imagem-escp terceiro" src="./src/img/code-home-dm.png" alt="">
                 <img class="imagem-escp quarto" src="./src/img/repeat-home-dm.png" alt="">
             </div>
-    </section>
-
-
-    <section id="sobre-mim" class="sobre-mim">
-        <div>
-            <img class="img-eu" src="./src/img/eu.jpg" alt="">
         </div>
-        <div class="descricao-sobre-mim">
-            <h1>Sobre Mim</h1>
-            <p>
-                Como desenvolvedor Frontend com 2 anos de experiencia em TI, meu foco principal e Javascript, TypeScript, ReactJS, NodeJs e NextJs.
-                Possuo Habilidades em Banco de dados relacionais e nao relacionais assim como controle de versionamento com Git. 
-                Graduado em ciências da computação, busco sempre me desenvolver naquilo que gosto de fazer, sou Front-end mas os estudos em Back-End para me tornar um Dev FullStack esta em progresso, conheça meus projetos e trajetoria de programaçao a seguir;
-            </p>
+    </section>
+    
+    <section id="sobre-mim" class="sobre-mim">
+        <div class="wrapper">
+            <div class="descricao-sobre-mim">
+                <h1>Sobre Mim</h1>
+                <p>
+                    Como desenvolvedor Frontend com 2 anos de experiencia em TI, meu foco principal e Javascript, TypeScript, ReactJS, NodeJs e NextJs.
+                    Possuo Habilidades em Banco de dados relacionais e nao relacionais assim como controle de versionamento com Git. 
+                    Graduado em ciências da computação, busco sempre me desenvolver naquilo que gosto de fazer, sou Front-end mas os estudos em Back-End para me tornar um Dev FullStack esta em progresso, conheça meus projetos e trajetoria de programaçao a seguir;
+                </p>
+            </div>
+            <div>
+                <img class="img-eu" src="./src/img/eu.jpg" alt="">
+            </div>
         </div>
     </section>
 
     <section id="projetos" class="projetos">
-        <div>
+        <div class="wrapper">
             <header>
                 <h2>PROJETOS</h2>
             </header>
@@ -212,7 +215,7 @@
     </section>
 
     <section id="conhecimentos" class="conhecimentos">
-        <div>
+        <div class="wrapper">
             <header>
                 <h2>
                     Conhecimento
