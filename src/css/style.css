@@ -2,7 +2,7 @@
   --primary-color: rgb(44, 99, 250);
   --primary-hover: rgba(0, 132, 255, 0.616);
   --secundary-color: hsl(0, 0%, 5%);
-  --third-color: hsla(0, 0%, 100%, 0.1);
+  --third-color: hsla(0, 0%, 45%, 0.1);
   --bg-color: hsl(0, 0%, 8%);
 
   --headline: hsl(0, 0%, 100%);
@@ -25,10 +25,11 @@ body {
 }
 
 body {
+  font-family: "Play";
   font-size: 1.6rem;
   text-align: center;
   overflow: overlay;
-  background-color: rgba(0, 0, 0, 0.925);
+  background-color: var(--bg-color);
 
 }
 
@@ -161,7 +162,7 @@ nav .wrapper{
 }
 
 body.light-mode nav.scroll {
-  background: rgba(151, 151, 151, 0.5);
+  background: var(--third-color);
 }
 
 .cabecalho-nome {
@@ -288,7 +289,7 @@ nav .close-menu {
 /*////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 a.cabecalho-nome {
-  font-family: "Gemunu Libre", sans-serif;
+  font-family: "Play", sans-serif;
   font-size: 3rem;
   opacity: 0.7;
 }
@@ -419,7 +420,7 @@ body.menu-expanded button path {
   display: flex;
   flex-direction: column;
   padding-top: 72px;
-  min-height: calc(60rem + 7.2rem);
+  min-height: 67.2rem;
   align-items: center;
 
 }
@@ -444,15 +445,16 @@ body.menu-expanded button path {
   gap: 1.25rem;
 }
 
-.apresentacao header {
+body.light-mode .apresentacao header {
   padding: 0.3125rem 0;
   font-size: 2rem;
+  color: var(--headline);
 }
 
 .apresentacao p {
   font-size: 1.6rem;
   font-weight: 400;
-  color: gray;
+  color: rgb(97, 96, 96);
 }
 
 .apresentacao h4 {
@@ -573,7 +575,7 @@ body.menu-expanded button path {
 
 .sobre-mim{
   display: flex;
-  background-color: rgb(43, 43, 43);
+  background-color: var(--secundary-color);
   align-items: center;
   justify-content: space-between;
 }
@@ -593,7 +595,7 @@ body.menu-expanded button path {
 .sobre-mim p{
   font-family: 'Play', sans-serif;
   font-weight: 400;
-  color: white;
+  color: var(--headline);
   text-align: justify;
   font-size: 1.5rem;
   margin-bottom: 5rem;
@@ -613,6 +615,7 @@ body.menu-expanded button path {
   display: flex;  
   align-items: center;
   justify-content: center;
+  background-color: var(--bg-color);
 }
 
 .projetos header{
@@ -757,7 +760,7 @@ body.menu-expanded button path {
 .conhecimentos {
     display: flex;
     padding: 7.1rem 2rem ;
-    background-color: rgb(43, 43, 43);
+    background-color: var(--secundary-color);
     align-items: center;
     justify-content: center;
 }
@@ -787,7 +790,7 @@ body.menu-expanded button path {
 .conhecimentos .card {
   height: 100%;
   padding: 4rem;
-  background: rgba(0, 0, 0, 0.356);
+  background: gray;
   border-radius: 0.6rem;
   display: flex;
   align-items: center;
@@ -816,6 +819,10 @@ body.menu-expanded button path {
 
 .conhecimentos .card:hover {
   background: rgba(0, 0, 0, 0.651);
+}
+
+body.light-mode .conhecimentos .card p span{
+  color: var(--secundary-color);
 }
 
 /*/////// CONTATO ///////////////////////////*/
@@ -902,14 +909,14 @@ footer .lista-redes-sociais {
   justify-content: flex-start;
 }
 
-footer .lista-redes-sociais li:nth-child(1) svg path {
-  stroke: white;
+body.light-mode .lista-redes-sociais li:nth-child(1) svg path {
+  stroke: var(--paragraph);
 }
 
-footer .lista-redes-sociais li:nth-child(2) svg path:nth-child(2),
-footer .lista-redes-sociais li:nth-child(3) svg path:nth-child(2),
-footer .lista-redes-sociais li:nth-child(4) svg path:nth-child(2) {
-  fill: white;
+body.light-mode footer .lista-redes-sociais li:nth-child(2) svg path:nth-child(2),
+body.light-mode footer .lista-redes-sociais li:nth-child(3) svg path:nth-child(2),
+body.light-mode footer .lista-redes-sociais li:nth-child(4) svg path:nth-child(2) {
+  fill: var(--paragraph);
 }
 
 /*===== SWITCH MODE TOGGLE =====================================*/
@@ -1368,7 +1375,7 @@ footer .lista-redes-sociais li:nth-child(4) svg path:nth-child(2) {
   /*===== PROJECTS ====================================*/
 
   #projetos {
-    background-color: var(--secundary-color);
+    background-color: var(--bg-color);
     font-family: "Play", sans-serif;
   }
 
@@ -1392,7 +1399,7 @@ footer .lista-redes-sociais li:nth-child(4) svg path:nth-child(2) {
     height: 5rem;
   }
 
-  /*===== KNOWLEDGE =====================================*/
+  /*===== CONHECIMENTOS =====================================*/
   
   #conhecimentos .cards-conhecimentos {
     display: grid;
