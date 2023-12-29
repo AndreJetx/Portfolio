@@ -171,6 +171,7 @@ body.light-mode nav.scroll {
   text-decoration: none;
   color: rgba(0, 132, 255, 0.616);
   font-size: 3rem;
+  text-shadow: 0 0 5px;
 }
 
 .cabecalho-menu ul {
@@ -463,6 +464,10 @@ body.light-mode .apresentacao header {
   color: rgb(44, 99, 250);
 }
 
+.apresentacao h1{
+  text-shadow: 0 0 5px;
+}
+
 .button-contato {
   background: none;
   border: 0.0125rem solid rgb(44, 99, 250);
@@ -480,6 +485,7 @@ body.light-mode .apresentacao header {
   gap: 1.6rem;
   position: relative;
   transition: 0.4s;
+  box-shadow: 0 0 5px;
 }
 
 .button-contato:hover {
@@ -651,6 +657,7 @@ body.light-mode .apresentacao header {
   gap: 2.5rem;
   transition: 400ms;
   color: white;
+  
 }
 
 .projetos .card .img-overlay{
@@ -684,7 +691,13 @@ body.light-mode .apresentacao header {
 
 
 .card:hover {
-  background: rgba(68, 68, 68, 0.89)
+  background: rgba(68, 68, 68, 0.89);
+  box-shadow: 0 0 20px;
+}
+
+body.light-mode .card:hover {
+  background: rgba(68, 68, 68, 0.89);
+  box-shadow: 0 0 30px black;
 }
 
 .card:hover > .img-overlay img {
