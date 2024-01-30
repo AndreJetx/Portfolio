@@ -9,6 +9,7 @@
 ## 💻 Sobre
 
 Projeto feito no intuito de me apresentar, como desenvolvedor web front-end.
+O projeto foi feito usando varios elementos css, html e javascript para demonstrar conhecimento.
 
 ## 🤯 O site é composto por:
 

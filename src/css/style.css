@@ -244,7 +244,8 @@ body .lista-redes-sociais li svg path {
 }
 
 body nav#navegacao .lista-redes-sociais li:nth-child(1) svg:hover path,
-body .lista-redes-sociais li:nth-child(1) svg:hover path {
+body .lista-redes-sociais li:nth-child(1) svg:hover path,
+body.light-mode .lista-redes-sociais li:nth-child(1) svg:hover path {
   stroke: #ff377a;
 }
 
@@ -254,17 +255,13 @@ body nav#navegacao .lista-redes-sociais li:nth-child(2) svg:hover path:nth-child
 }
 
 body.light-mode .lista-redes-sociais li:nth-child(2) svg:hover path:nth-child(2),
-body.light-mode
-  nav#navegacao
-  .lista-redes-sociais
-  li:nth-child(2)
-  svg:hover
-  path:nth-child(2) {
+body.light-mode nav#navegacao .lista-redes-sociais li:nth-child(2) svg:hover path:nth-child(2) {
   fill: #000;
 }
 
 body .lista-redes-sociais li:nth-child(3) svg:hover path:nth-child(2),
-body nav#navegacao .lista-redes-sociais li:nth-child(3) svg:hover path:nth-child(2) {
+body nav#navegacao .lista-redes-sociais li:nth-child(3) svg:hover path:nth-child(2),
+body.light-mode .lista-redes-sociais li:nth-child(3) svg:hover path:nth-child(2) {
   fill: #0a66c2;
 }
 
@@ -922,7 +919,7 @@ footer .lista-redes-sociais {
   justify-content: flex-start;
 }
 
-body.light-mode .lista-redes-sociais li:nth-child(1) svg path {
+body.light-mode footer .lista-redes-sociais li:nth-child(1) svg path {
   stroke: var(--paragraph);
 }
 
@@ -1111,6 +1108,8 @@ body.light-mode footer .lista-redes-sociais li:nth-child(4) svg path:nth-child(2
     font-weight: initial;
     filter: initial;
   }
+
+
 
   nav#navegacao a.cabecalho-nome,
   footer a.cabecalho-nome {
