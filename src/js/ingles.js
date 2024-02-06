@@ -1,6 +1,4 @@
-export function english(body){
-    let english =
-    `<body id="body">
+export const english = `
         <nav id="navegacao" class="nav">
             
             <div class="container">
@@ -87,7 +85,7 @@ export function english(body){
                 <div class="descricao-sobre-mim col-a">
                     <h1>Sobre Mim</h1>
                     <p>
-                        Como desenvolvedor Frontend com 2 anos de experiencia em TI, meu foco principal e Javascript, TypeScript, React e NodeJs.
+                        ENGLIIIIIIISH Como desenvolvedor Frontend com 2 anos de experiencia em TI, meu foco principal e Javascript, TypeScript, React e NodeJs.
                         Possuo Habilidades em Banco de dados relacionais e nao relacionais assim como controle de versionamento com Git. 
                         Graduado em ciências da computação, busco sempre me desenvolver naquilo que gosto de fazer, sou Front-end mas os estudos em Back-End para me tornar um Dev FullStack esta em progresso, conheça meus projetos e trajetoria de programaçao a seguir;
                     </p>
@@ -382,7 +380,4 @@ export function english(body){
                 </svg>
             </label>
         </div>
-    <script type="module" src="./src/js/index.js"></script>
-    </body>`
-    return english
-}
+`
