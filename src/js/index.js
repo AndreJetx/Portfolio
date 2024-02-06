@@ -1,3 +1,6 @@
+import { english, english } from './Ingles.js';
+import { espanhol } from './espanhol.js';
+
 const toggle = document.querySelector("#sw-checkbox");
 
 
@@ -63,3 +66,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    var switchLanguageButtonEN = document.getElementById('switchLanguageen');
+    var switchLanguageButtonES = document.getElementById('switchLanguageesp');
+    var contentDiv = document.getElementById('body');
+
+    switchLanguageButtonEN.addEventListener('click',  () => {
+        console.log('Botão EN clicado');
+        let ingles = english(contentDiv);
+        contentDiv.innerHTML = ingles;
+    });
+
+    switchLanguageButtonES.addEventListener('click',  () => {
+        console.log('Botão ES clicado');
+        espanhol(contentDiv);
+    });
+});
+
+

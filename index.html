@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,10 +16,10 @@
 
 </head>
 
-<body>
+<body id="body">
     <nav id="navegacao" class="nav">
         
-        <div class="wrapper">
+        <div class="container">
             <a class="cabecalho-nome" href="#home">AndreJuan</a>
                             
                 <div class="cabecalho-menu">
@@ -56,7 +56,7 @@
                                     <path d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z" fill="white"></path>
                                 </svg>
                             </a>
-                        </li>                        
+                        </li>                       
                     </ul>
                 </div>
 
@@ -77,7 +77,7 @@
     </nav>
     
     <section id="home" class="home">
-        <div class="wrapper">
+        <div class="container">
             <div class="apresentacao col-a">
                 <header>
                     <h4>Hello world 👋🏾</h4>
@@ -99,7 +99,7 @@
     </section>
     
     <section id="sobre-mim" class="sobre-mim">
-        <div class="wrapper">
+        <div class="container">
             <div class="descricao-sobre-mim col-a">
                 <h1>Sobre Mim</h1>
                 <p>
@@ -115,7 +115,7 @@
     </section>
 
     <section id="projetos" class="projetos">
-        <div class="wrapper">
+        <div class="container">
             <header>
                 <h2>PROJETOS</h2>
             </header>
@@ -228,7 +228,7 @@
     </section>
 
     <section id="conhecimentos" class="conhecimentos">
-        <div class="wrapper">
+        <div class="container">
             <header>
                 <h2>
                     Conhecimento
@@ -326,7 +326,7 @@
     </section>
 
     <footer>
-        <div class="wrapper">
+        <div class="container">
             <div class="footer-col-a">
                 <a class="cabecalho-nome" href="#home"> Andre Juan </a>
 
@@ -367,6 +367,24 @@
         </div>
     </footer>
 
+    <div id="lang">
+        <ul>
+            <li>
+                <button class="active">
+                    <a href="./index.html">
+                        <img src="./src/img/br-flag.png" alt="BR flag"/>
+                    </a>
+                </button>
+                <button id="switchLanguageen">
+                    <img src="./src/img/eua-flag.png" alt="English Flag"/>
+                </button>
+                <button id="switchLanguageesp">
+                    <img src="./src/img/esp-flag.png" alt="Espanhol Flag"/>
+                </button>
+            </li>
+        </ul>
+    </div>
+
     <div id="toggle">
         <input type="checkbox" id="sw-checkbox">
         <label for="sw-checkbox" title="Mudar tema">
@@ -380,6 +398,6 @@
             </svg>
         </label>
     </div>
-<script src="./src/js/index.js"></script>
+<script type="module" src="./src/js/index.js"></script>
 </body>
 </html>
