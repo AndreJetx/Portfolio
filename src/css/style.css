@@ -438,6 +438,7 @@ body.menu-expanded button path {
 }
 
 .apresentacao-1 {
+  max-width: max-content;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -989,7 +990,7 @@ body.light-mode footer .lista-redes-sociais li:nth-child(4) svg path:nth-child(2
   position: fixed;
   bottom: 0;
   right: 0;
-  margin: 1rem;
+  margin: 2rem;
 }
 
 #lang button{
@@ -1329,7 +1330,7 @@ body.light-mode footer .lista-redes-sociais li:nth-child(4) svg path:nth-child(2
   }
 
   .linha {
-    width: 83%;
+    width: max-content;
     border-right: 0.2rem solid rgb(44, 99, 250);
     white-space: nowrap;
     overflow: hidden;
@@ -1345,7 +1346,7 @@ body.light-mode footer .lista-redes-sociais li:nth-child(4) svg path:nth-child(2
       width: 0;
     }
     to {
-      width: 83%;
+      width: 100%;
     }
   }
 

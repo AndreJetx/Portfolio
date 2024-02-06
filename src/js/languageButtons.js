@@ -1,21 +1,33 @@
-import { english } from './ingles.js';
+import { english } from './Ingles.js';
 import { espanhol } from './espanhol.js';
+import { handleToggleChange } from './index.js';
+import { updateNavbarStyle } from './index.js';
+import { openMenu } from './index.js';
+import { closeMenu } from './index.js';
 
-export const teste = () => {
-	var switchLanguageButtonEN = document.getElementById('switchLanguageen');
-	var contentDiv = document.getElementById('body');
-	var switchLanguageButtonES = document.getElementById('switchLanguageesp');
-	console.log('aaa');
+export const idioma = () => {
+	let switchLanguageButtonEN = document.getElementById('switchLanguageen');
+	let contentDiv = document.getElementById('body');
+	let switchLanguageButtonES = document.getElementById('switchLanguageesp');
+
 
 	switchLanguageButtonEN.addEventListener('click', () => {
-		console.log('Botão EN clicado');
 		contentDiv.innerHTML = english;
-		teste();
+		idioma();
+		handleToggleChange();
+		updateNavbarStyle();
+		openMenu();
+		closeMenu();
+		
 	});
 
 	switchLanguageButtonES.addEventListener('click', () => {
-		console.log('Botão ES clicado');
 		contentDiv.innerHTML = espanhol;
-		teste();
+		idioma();
+		handleToggleChange();
+		updateNavbarStyle();
+		openMenu();
+		closeMenu();
 	});
 };
+

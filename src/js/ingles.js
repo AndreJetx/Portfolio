@@ -63,11 +63,11 @@ export const english = `
                 <div class="apresentacao col-a">
                     <header>
                         <h4>Hello world 👋🏾</h4>
-                        <h1>Eu sou o André</h1>
+                        <h1>I'm André</h1>
                     </header>
                     <div class="apresentacao-1">
-                        <p class="linha digitando">Desenvolvedor Web Front-end.</p>
-                        <a class="button-contato" href="#contato">Fale Comigo</a>
+                        <p class="linha digitando">Front-end web developer.</p>
+                        <a class="button-contato" href="#contato">Contact me</a>
                     </div>
                 </div>
                 
@@ -83,11 +83,11 @@ export const english = `
         <section id="sobre-mim" class="sobre-mim">
             <div class="container">
                 <div class="descricao-sobre-mim col-a">
-                    <h1>Sobre Mim</h1>
+                    <h1>About me</h1>
                     <p>
-                        ENGLIIIIIIISH Como desenvolvedor Frontend com 2 anos de experiencia em TI, meu foco principal e Javascript, TypeScript, React e NodeJs.
-                        Possuo Habilidades em Banco de dados relacionais e nao relacionais assim como controle de versionamento com Git. 
-                        Graduado em ciências da computação, busco sempre me desenvolver naquilo que gosto de fazer, sou Front-end mas os estudos em Back-End para me tornar um Dev FullStack esta em progresso, conheça meus projetos e trajetoria de programaçao a seguir;
+                    As a Frontend developer with 2 years of experience in IT, my main focus is Javascript, TypeScript, React and NodeJs.
+                    I have skills in relational and non-relational databases as well as versioning control with Git.
+                    Graduated in computer science, I always seek to develop myself in what I like to do, I am a Front-End but studies in Back-End to become a FullStack Dev are in progress, find out about my projects and programming path below;
                     </p>
                 </div>
                 <div class="col-b">
@@ -99,7 +99,7 @@ export const english = `
         <section id="projetos" class="projetos">
             <div class="container">
                 <header>
-                    <h2>PROJETOS</h2>
+                    <h2>PROJECTS</h2>
                 </header>
                 <div class="cards-projetos">
                     <div class="card">
@@ -123,14 +123,14 @@ export const english = `
                             </div>
                         </div>
     
-                        <p>Site em desenvolvimento para um projeto de game de combate em plataforma 2d</p>
+                        <p>Website under development for a 2d platform combat game project</p>
     
                         <p> HTML - CSS - JS</p>
     
                     </div>
     
                     <div class="card">
-                        <h3>Previsao do tempo</h3>
+                        <h3>Weather forecast</h3>
                         <div class="img-overlay">
                             <img src="https://phoneky.co.uk/thumbs/screensavers/down/nature/1184252_PGnUX7Hz.gif" alt="gif projeto 1"> 
                             <div class="buttons">
@@ -150,7 +150,7 @@ export const english = `
                             </div>
                         </div>
     
-                        <p>Aplicativo para ver a previsao do tempo em qualquer lugar do mundo, utilizando de consumo da api Weather </p>
+                        <p>Application to see the weather forecast anywhere in the world, using the Weather API</p>
     
                         <p> HTML - CSS - JS</p>
     
@@ -177,7 +177,7 @@ export const english = `
                             </div>
                         </div>
     
-                        <p>Projeto em processo de finalizaçao - Deploy ainda nao realizado, confira o codigo no repositorio do github</p>
+                        <p>Project in the process of completion - Deploy not yet carried out, check the code in the github repository</p>
     
                         <p> NODE.JS - REACT - TS </p>
                     </div>
@@ -185,14 +185,14 @@ export const english = `
                     <div></div>
     
                     <div class="card em-breve">
-                        <h3>Em Breve</h3>
+                        <h3>Coming soon</h3>
     
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                             <path fill="none" d="M0 0h24v24H0z"></path>
                             <path d="M5 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm14 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-7 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" fill="rgba(255,255,255,1)"></path>
                         </svg>
     
-                        <p>Evoluçao constante!<br> Em breve muitos outros projetos. </p>
+                        <p>Constant evolution!<br> Many other projects coming soon. </p>
     
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 70 70" xml:space="preserve"><path d="M62.817 2.583H6.026c-2.209 0-3.443 2.06-3.443 4.269v57c0 2.209 1.234 2.731 3.443 2.731h57c2.209 0 3.557-.522 3.557-2.731v-58c0-2.209-1.557-3.269-3.766-3.269zm-.234 4v9h-56v-9h56zm-56 56v-45h56v45h-56z" fill="rgba(255,255,255,1)"/>
                         <path d="M10.417 12.583h2a1 1 0 1 0 0-2h-2a1 1 0 1 0 0 2zm6 0h2a1 1 0 1 0 0-2h-2a1 1 0 1 0 0 2zm6 0h2a1 1 0 1 0 0-2h-2a1 1 0 1 0 0 2zm3.692 20.494a.998.998 0 0 0-1.406.143l-5.944 7.283a.998.998 0 0 0-.021 1.238l5.944 7.801a.997.997 0 0 0 1.401.189 1 1 0 0 0 .188-1.401l-5.466-7.173 5.445-6.673a.996.996 0 0 0-.141-1.407zm18.219.168a1 1 0 1 0-1.589 1.213l5.466 7.172-5.445 6.674a.997.997 0 0 0 .143 1.406.997.997 0 0 0 1.406-.142l5.944-7.284a.998.998 0 0 0 .021-1.238l-5.946-7.801zm-13.087-1.511a1.001 1.001 0 0 0-1.86.738l7.916 19.918a1 1 0 1 0 1.86-.738l-7.916-19.918z" fill="rgba(255,255,255,1)"/></svg>
@@ -213,7 +213,7 @@ export const english = `
             <div class="container">
                 <header>
                     <h2>
-                        Conhecimento
+                        Knowledge
                     </h2>
                 </header>
     
@@ -221,48 +221,51 @@ export const english = `
                     <div class="card">
                         <img src="./src/img/html.png" alt="">
                         <h3>HTML</h3>
-                        <p>Começando minha trajetoria em web, me dediquei a aprender suas tags e organograma, para fabricar aplicaçoes e sites para internet.</p>
+                        <p>
+                            Starting my journey on the web, I dedicated myself to learning its tags and organization chart, to create applications and websites for the internet.
+                        </p>
                     </div>
     
                     <div class="card">
                         <img src="./src/img/css.png" alt="">
                         <h3>CSS</h3>
-                        <p>Em conjunto com HTML e em constante aprendizado, utilizo do CSS3 para estilizar as paginas e deixalas interativas.</p>
+                        <p>In conjunction with HTML and constantly learning, I use CSS3 to style the pages and make them interactive.
+                        </p>
                     </div>
                     <div class="card">
                         <img src="./src/img/javascript.png" alt="">
                         <h3>JavaScript</h3>
-                        <p>Uso o JS para fazer o desenvolvimento de funcionalidades e comportamento das paginas.</p>
+                        <p>I use JS to develop page functionality and behavior.</p>
                     </div>
     
                     <div class="card">
                         <img src="./src/img/react.png" alt="">
                         <h3>React</h3>
-                        <p><span>Com inicio de aprendizado em 2023</span>, utilizo o react para componentizar os elementos, facilitando a construção de interfaces interativas e responsivas.</p>
+                        <p><span>With learning starting in 2023</span>, I use React to componentize elements, making it easier to build interactive and responsive interfaces.</p>
                     </div>
     
                     <div class="card">
                         <img src="./src/img/tailwind.png" alt="">
                         <h3>Tailwind</h3>
-                        <p><span>Com inicio de aprendizado em 2023</span> o tailwind foca na criação de estilos diretamente no HTML usando classes utilitárias permitindo estilos únicos e eficientes</p>
+                        <p><span>With learning starting in 2023</span> tailwind focuses on creating styles directly in HTML using utility classes allowing for unique and efficient styles</p>
                     </div>
     
                     <div class="card">
                         <img src="./src/img/typescript.png" alt="">
                         <h3>Typescript</h3>
-                        <p><span>Com inicio de aprendizado em 2023</span>,o TS funciona como uma extençao do JS, estou dedicando meu tempo a dominar a linguagem  </p>
+                        <p><span>With learning starting in 2023</span>,o TS funciona como uma extençao do JS, estou dedicando meu tempo a dominar a linguagem  </p>
                     </div>
     
                     <div class="card">
                         <img src="./src/img/node.png" alt="">
                         <h3>Node.JS</h3>
-                        <p><span>Com inicio de aprendizado em 2023</span>, utilizo o node para instaçao simplificada de bibliotecas e frameworks, alem de desenvolver aplicaçoes escalaveis, e conexoes de redes eficiente </p>
+                        <p><span>With learning starting in 2023</span>, utilizo o node para instaçao simplificada de bibliotecas e frameworks, alem de desenvolver aplicaçoes escalaveis, e conexoes de redes eficiente </p>
                     </div>
     
                     <div class="card">
                         <img src="./src/img/redux.png" alt="">
                         <h3>Redux</h3>
-                        <p><span>Com inicio de aprendizado em <span class="span-conhecimentos">setembro</span> de 2023</span>, redux é uma biblioteca de gerenciamento de estado para aplicações JavaScript, especialmente com frameworks como React.</p>
+                        <p><span>With learning starting in 2023</span>, redux is a state management library for JavaScript applications, especially with frameworks like React.</p>
                     </div>           
                 </div>
     
@@ -273,7 +276,7 @@ export const english = `
             <div class="contato-colunas">
                 <div class="contato-col-a">
                     <header>
-                        <h2>Fale comigo !</h2>                    
+                        <h2>Contact Me!</h2>                    
                     </header>
                     <div>
                         <ul>
@@ -313,8 +316,8 @@ export const english = `
                     <a class="cabecalho-nome" href="#home"> Andre Juan </a>
     
                     <p>
-                        ©2024 por Andre Juan. <br />
-                        Todos os direitos reservados.
+                        ©2024 by André Juan. <br />
+                        All rights reserved.
                     </p>
                 </div>
     
@@ -380,4 +383,4 @@ export const english = `
                 </svg>
             </label>
         </div>
-`
+`;
