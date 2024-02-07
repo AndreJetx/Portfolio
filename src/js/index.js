@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	window.addEventListener('scroll', function () {
 		updateNavbarStyle();
 	});
-  handleToggleChange();
+	handleToggleChange();
 });
 
 export function updateNavbarStyle() {
