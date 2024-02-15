@@ -1,4 +1,4 @@
-import { english } from './Ingles.js';
+import { english } from './ingles.js';
 import { espanhol } from './espanhol.js';
 import { handleToggleChange } from './index.js';
 import { updateNavbarStyle } from './index.js';
