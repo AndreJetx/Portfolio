@@ -1,0 +1,176 @@
+Crie um projeto completo de portfólio profissional em Next.js (App Router) usando:
+
+Next.js 14+
+
+TypeScript
+
+TailwindCSS
+
+Estrutura escalável e organizada por pastas
+
+Código limpo, comentado e didático
+
+Design moderno, minimalista e profissional
+
+Responsivo (desktop e mobile)
+
+🎯 Objetivo
+
+Desenvolver um portfólio profissional com menu lateral fixo (sidebar) e conteúdo dividido em seções navegáveis, NÃO no formato landing page. Deve parecer um painel institucional/profissional, e não uma página única de rolagem contínua.
+
+🧱 Estrutura esperada
+
+Criar a seguinte organização:
+
+/app
+  /about
+  /projects
+  /skills
+  /experience
+  /contact
+/components
+  Sidebar.tsx
+  Header.tsx
+  SectionContainer.tsx
+  ProjectCard.tsx
+/lib
+/styles
+
+📌 Layout principal
+
+Sidebar fixa à esquerda (desktop)
+
+Conteúdo principal à direita
+
+No mobile: sidebar vira menu colapsável (hamburger)
+
+Navegação entre seções usando rotas (não scroll interno)
+
+🎨 Design
+
+Visual sóbrio e profissional
+
+Cores: fundo escuro (#0f172a ou similar), detalhes em azul ou roxo moderno
+
+Tipografia moderna (ex: Inter ou similar)
+
+Ícones elegantes (lucide-react)
+
+Animações suaves com framer-motion (hover, fade-in)
+
+📚 Seções obrigatórias
+1️⃣ Sobre
+
+Foto ou avatar
+
+Mini biografia profissional
+
+Tecnologias principais
+
+Botão para download de currículo (PDF mockado)
+
+2️⃣ Projetos
+
+Lista de projetos em cards
+
+Cada card deve conter:
+
+Nome
+
+Descrição
+
+Tecnologias usadas
+
+Botões para GitHub e Demo
+
+Estrutura preparada para futuramente consumir API ou JSON
+
+3️⃣ Habilidades
+
+Separado por categorias:
+
+Frontend
+
+Backend
+
+DevOps
+
+Banco de Dados
+
+Com barras de progresso ou badges
+
+4️⃣ Experiência
+
+Timeline vertical moderna
+
+Empresa
+
+Cargo
+
+Período
+
+Descrição resumida
+
+5️⃣ Contato
+
+Formulário funcional (simulado)
+
+Campos:
+
+Nome
+
+Email
+
+Mensagem
+
+Validação básica
+
+Botões para LinkedIn, GitHub e Email
+
+⚙️ Requisitos Técnicos
+
+Usar Server Components onde fizer sentido
+
+Separar componentes reutilizáveis
+
+Usar props tipadas
+
+Criar dados mockados em arquivo separado
+
+Código preparado para fácil expansão
+
+SEO básico configurado
+
+Metadata configurado no layout.tsx
+
+Dark mode por padrão
+
+💎 Diferenciais
+
+Estado ativo destacado no menu lateral
+
+Transições suaves entre páginas
+
+Scroll independente no conteúdo
+
+Estrutura pronta para blog futuro
+
+Footer discreto
+
+🧠 Importante
+
+O projeto deve ser:
+
+Profissional
+
+Didático (com comentários explicando decisões)
+
+Escalável
+
+Pronto para produção
+
+Organizado como se fosse um projeto real para cliente
+
+Não criar no formato landing page.
+Não usar template genérico.
+Criar estrutura real de projeto Next.js.
