@@ -24,11 +24,11 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const items = [
-  { title: "About", url: "/", icon: User },
-  { title: "Projects", url: "/projects", icon: Code2 },
-  { title: "Experience", url: "/experience", icon: Briefcase },
-  { title: "Skills", url: "/skills", icon: Code2 }, // Reusing Code2, or could use different icon
-  { title: "Contact", url: "/contact", icon: Mail },
+  { title: "Sobre", url: "/", icon: User },
+  { title: "Projetos", url: "/projects", icon: Code2 },
+  { title: "Experiência", url: "/experience", icon: Briefcase },
+  { title: "Habilidades", url: "/skills", icon: Code2 },
+  { title: "Contato", url: "/contact", icon: Mail },
 ];
 
 export function AppSidebar() {
@@ -42,19 +42,19 @@ export function AppSidebar() {
             <div className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-600 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
             <Avatar className="h-24 w-24 border-2 border-white/10 relative">
               <AvatarImage src="https://github.com/shadcn.png" />
-              <AvatarFallback>CN</AvatarFallback>
+              <AvatarFallback>AD</AvatarFallback>
             </Avatar>
           </div>
           <div className="text-center">
             <h3 className="font-display font-bold text-lg text-white tracking-tight">Alex Designer</h3>
-            <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider">Full Stack Engineer</p>
+            <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider">Engenheiro Full Stack</p>
           </div>
         </div>
       </SidebarHeader>
 
       <SidebarContent className="px-4">
         <SidebarGroup>
-          <SidebarGroupLabel className="text-xs uppercase tracking-wider text-muted-foreground/70 mb-2 px-2">Navigation</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-xs uppercase tracking-wider text-muted-foreground/70 mb-2 px-2">Navegação</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu className="space-y-1">
               {items.map((item) => (

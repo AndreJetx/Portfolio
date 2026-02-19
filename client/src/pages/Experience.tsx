@@ -13,9 +13,9 @@ export default function Experience() {
     <PageTransition>
       <div className="max-w-4xl mx-auto px-6 py-12 md:py-20 space-y-12">
         <div className="space-y-4">
-          <h2 className="font-display text-4xl font-bold">Experience</h2>
+          <h2 className="font-display text-4xl font-bold">Experiência</h2>
           <p className="text-muted-foreground text-lg max-w-2xl">
-            My professional journey and the roles I've held in the industry.
+            Minha jornada profissional e os cargos que ocupei na indústria.
           </p>
         </div>
 

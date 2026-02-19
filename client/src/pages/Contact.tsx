@@ -45,9 +45,9 @@ export default function Contact() {
           {/* Left Column: Info */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="font-display text-4xl font-bold">Get in Touch</h2>
+              <h2 className="font-display text-4xl font-bold">Entre em Contato</h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+                Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades para fazer parte da sua visão.
               </p>
             </div>
 
@@ -57,7 +57,7 @@ export default function Contact() {
                   <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-white mb-1">Mail Me</h3>
+                  <h3 className="font-bold text-white mb-1">E-mail</h3>
                   <a href="mailto:hello@alex.design" className="text-muted-foreground hover:text-white transition-colors">
                     hello@alex.design
                   </a>
@@ -69,10 +69,10 @@ export default function Contact() {
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-white mb-1">Location</h3>
+                  <h3 className="font-bold text-white mb-1">Localização</h3>
                   <p className="text-muted-foreground">
-                    San Francisco, CA<br />
-                    Remote Available
+                    São Paulo, SP<br />
+                    Disponível para Remoto
                   </p>
                 </div>
               </div>
@@ -82,8 +82,8 @@ export default function Contact() {
                   <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-white mb-1">Call</h3>
-                  <p className="text-muted-foreground">+1 (555) 000-0000</p>
+                  <h3 className="font-bold text-white mb-1">Telefone</h3>
+                  <p className="text-muted-foreground">+55 (11) 99999-9999</p>
                 </div>
               </div>
             </div>
@@ -99,10 +99,10 @@ export default function Contact() {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <Label className="text-xs uppercase tracking-wide font-bold text-muted-foreground ml-1">Name</Label>
+                        <Label className="text-xs uppercase tracking-wide font-bold text-muted-foreground ml-1">Nome</Label>
                         <FormControl>
                           <Input 
-                            placeholder="John Doe" 
+                            placeholder="Seu nome" 
                             {...field} 
                             className="bg-black/20 border-white/10 focus:border-primary/50 focus:bg-black/40 h-12 rounded-xl transition-all"
                           />
@@ -116,10 +116,10 @@ export default function Contact() {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <Label className="text-xs uppercase tracking-wide font-bold text-muted-foreground ml-1">Email</Label>
+                        <Label className="text-xs uppercase tracking-wide font-bold text-muted-foreground ml-1">E-mail</Label>
                         <FormControl>
                           <Input 
-                            placeholder="john@example.com" 
+                            placeholder="seu@email.com" 
                             {...field} 
                             className="bg-black/20 border-white/10 focus:border-primary/50 focus:bg-black/40 h-12 rounded-xl transition-all"
                           />
@@ -135,10 +135,10 @@ export default function Contact() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <Label className="text-xs uppercase tracking-wide font-bold text-muted-foreground ml-1">Message</Label>
+                      <Label className="text-xs uppercase tracking-wide font-bold text-muted-foreground ml-1">Mensagem</Label>
                       <FormControl>
                         <Textarea 
-                          placeholder="Tell me about your project..." 
+                          placeholder="Conte-me sobre seu projeto..." 
                           {...field} 
                           className="bg-black/20 border-white/10 focus:border-primary/50 focus:bg-black/40 min-h-[150px] rounded-xl resize-none transition-all"
                         />
@@ -153,9 +153,9 @@ export default function Contact() {
                   disabled={mutation.isPending}
                   className="w-full h-14 text-lg font-semibold rounded-xl bg-gradient-to-r from-primary to-blue-600 hover:opacity-90 transition-all shadow-lg shadow-primary/20"
                 >
-                  {mutation.isPending ? "Sending..." : (
+                  {mutation.isPending ? "Enviando..." : (
                     <>
-                      Send Message <Send className="ml-2 w-5 h-5" />
+                      Enviar Mensagem <Send className="ml-2 w-5 h-5" />
                     </>
                   )}
                 </Button>

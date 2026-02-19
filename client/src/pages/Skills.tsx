@@ -1,16 +1,15 @@
 import { PageTransition } from "@/components/layout/PageTransition";
 import { useSkills } from "@/hooks/use-portfolio";
-import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { 
   Code2, 
   Database, 
   Layout, 
   Server, 
-  Terminal, 
   Wrench,
   Cloud
 } from "lucide-react";
+import * as SimpleIcons from "react-icons/si";
 
 const getIcon = (category: string) => {
   switch(category.toLowerCase()) {
@@ -21,6 +20,12 @@ const getIcon = (category: string) => {
     case 'tools': return <Wrench className="w-5 h-5" />;
     default: return <Code2 className="w-5 h-5" />;
   }
+};
+
+const getTechIcon = (iconName: string) => {
+  const IconComponent = (SimpleIcons as any)[iconName];
+  if (!IconComponent) return null;
+  return <IconComponent className="w-8 h-8" />;
 };
 
 export default function Skills() {
@@ -37,17 +42,16 @@ export default function Skills() {
     <PageTransition>
       <div className="max-w-5xl mx-auto px-6 py-12 md:py-20 space-y-12">
         <div className="space-y-4">
-          <h2 className="font-display text-4xl font-bold">Technical Skills</h2>
+          <h2 className="font-display text-4xl font-bold">Habilidades Técnicas</h2>
           <p className="text-muted-foreground text-lg max-w-2xl">
-            A comprehensive overview of my technical expertise and the technologies I work with.
+            Uma visão geral das tecnologias e ferramentas que utilizo no meu dia a dia como desenvolvedor.
           </p>
         </div>
 
         {isLoading ? (
-          <div className="space-y-8">
-            <Skeleton className="h-32 w-full rounded-2xl bg-white/5" />
-            <Skeleton className="h-32 w-full rounded-2xl bg-white/5" />
-            <Skeleton className="h-32 w-full rounded-2xl bg-white/5" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Skeleton className="h-48 w-full rounded-2xl bg-white/5" />
+            <Skeleton className="h-48 w-full rounded-2xl bg-white/5" />
           </div>
         ) : (
           <div className="grid gap-8">
@@ -56,30 +60,22 @@ export default function Skills() {
                 key={category} 
                 className="bg-card/30 border border-white/5 rounded-2xl p-6 md:p-8 backdrop-blur-sm"
               >
-                <div className="flex items-center gap-3 mb-6">
+                <div className="flex items-center gap-3 mb-8">
                   <div className="p-2 bg-primary/10 rounded-lg text-primary">
                     {getIcon(category)}
                   </div>
                   <h3 className="text-xl font-bold capitalize tracking-tight">{category}</h3>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-6">
+                <div className="flex flex-wrap gap-8 justify-start">
                   {categorySkills.map((skill) => (
-                    <div key={skill.id} className="space-y-2 group">
-                      <div className="flex justify-between items-center">
-                        <span className="font-medium text-sm group-hover:text-primary transition-colors">
-                          {skill.name}
-                        </span>
-                        <span className="text-xs text-muted-foreground tabular-nums">
-                          {skill.proficiency}%
-                        </span>
+                    <div key={skill.id} className="flex flex-col items-center gap-3 group transition-transform hover:scale-110">
+                      <div className="p-4 bg-white/5 rounded-2xl text-muted-foreground group-hover:text-primary group-hover:bg-primary/10 transition-colors">
+                        {getTechIcon(skill.icon || '')}
                       </div>
-                      <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-                        <div 
-                          className="h-full bg-gradient-to-r from-primary to-blue-500 rounded-full transition-all duration-1000 ease-out"
-                          style={{ width: `${skill.proficiency}%` }}
-                        />
-                      </div>
+                      <span className="font-medium text-xs text-muted-foreground group-hover:text-foreground transition-colors">
+                        {skill.name}
+                      </span>
                     </div>
                   ))}
                 </div>

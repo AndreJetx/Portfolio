@@ -2,6 +2,7 @@ import { PageTransition } from "@/components/layout/PageTransition";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, Terminal, Database, Palette, Cpu } from "lucide-react";
 import { Link } from "wouter";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -10,22 +11,22 @@ export default function Home() {
         <div className="space-y-6">
           <div className="inline-flex items-center px-3 py-1 rounded-full border border-primary/20 bg-primary/10 text-primary text-xs font-medium tracking-wide">
             <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
-            AVAILABLE FOR HIRE
+            DISPONÍVEL PARA NOVOS PROJETOS
           </div>
           
           <h1 className="font-display text-5xl md:text-7xl font-bold tracking-tight leading-tight">
-            Building digital <br />
-            <span className="text-gradient-primary">experiences</span> that matter.
+            Construindo <br />
+            <span className="text-gradient-primary">experiências</span> digitais.
           </h1>
           
           <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            I'm a Full Stack Engineer passionate about crafting beautiful, intuitive, and performant user interfaces. I bridge the gap between design and engineering.
+            Sou um Engenheiro Full Stack apaixonado por criar interfaces bonitas, intuitivas e performáticas. Eu conecto o design à engenharia.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <Link href="/projects">
               <Button size="lg" className="h-12 px-8 text-base rounded-full shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all">
-                View Work <ArrowRight className="ml-2 h-4 w-4" />
+                Ver Projetos <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
             <Button variant="outline" size="lg" className="h-12 px-8 text-base rounded-full border-white/10 hover:bg-white/5 hover:text-white transition-all">

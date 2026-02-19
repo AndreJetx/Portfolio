@@ -64,8 +64,8 @@ export async function registerRoutes(
 async function seedDatabase() {
   // Projects
   await storage.createProject({
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution built with Next.js, Stripe, and PostgreSQL. Features include real-time inventory management, secure payments, and an admin dashboard.",
+    title: "Plataforma de E-Commerce",
+    description: "Uma solução completa de e-commerce full-stack construída com Next.js, Stripe e PostgreSQL. Inclui gerenciamento de inventário em tempo real, pagamentos seguros e um painel administrativo.",
     imageUrl: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
     tags: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
     githubUrl: "https://github.com",
@@ -74,8 +74,8 @@ async function seedDatabase() {
   });
 
   await storage.createProject({
-    title: "Task Management App",
-    description: "Collaborative task management tool with real-time updates using WebSockets. Supports drag-and-drop interfaces and team workspaces.",
+    title: "App de Gerenciamento de Tarefas",
+    description: "Ferramenta colaborativa de gestão de tarefas com atualizações em tempo real usando WebSockets. Suporta interfaces de arrastar e soltar e espaços de trabalho em equipe.",
     imageUrl: "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?w=800&q=80",
     tags: ["React", "Node.js", "Socket.io", "TailwindCSS"],
     githubUrl: "https://github.com",
@@ -84,8 +84,8 @@ async function seedDatabase() {
   });
 
   await storage.createProject({
-    title: "AI Content Generator",
-    description: "SaaS application that uses OpenAI's GPT-4 API to generate marketing copy and blog posts. Includes a rich text editor and SEO optimization tools.",
+    title: "Gerador de Conteúdo com IA",
+    description: "Aplicação SaaS que utiliza a API GPT-4 da OpenAI para gerar textos de marketing e postagens de blog. Inclui um editor de texto rico e ferramentas de otimização de SEO.",
     imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
     tags: ["OpenAI API", "Python", "FastAPI", "React"],
     githubUrl: "https://github.com",
@@ -111,26 +111,26 @@ async function seedDatabase() {
 
   // Experience
   await storage.createExperience({
-    role: "Senior Full Stack Developer",
+    role: "Desenvolvedor Full Stack Sênior",
     company: "Tech Solutions Inc.",
-    period: "2021 - Present",
-    description: "Leading a team of 5 developers building scalable web applications. Architected and deployed microservices infrastructure serving 1M+ users.",
+    period: "2021 - Presente",
+    description: "Liderança de uma equipe de 5 desenvolvedores na construção de aplicações web escaláveis. Arquitetura e implantação de infraestrutura de microserviços atendendo a mais de 1 milhão de usuários.",
     order: 1
   });
 
   await storage.createExperience({
-    role: "Frontend Developer",
-    company: "Creative Agency",
+    role: "Desenvolvedor Frontend",
+    company: "Agência Criativa",
     period: "2019 - 2021",
-    description: "Developed responsive websites and web applications for high-profile clients. Improved site performance by 40% through code optimization.",
+    description: "Desenvolvimento de sites responsivos e aplicações web para clientes de alto perfil. Melhoria na performance do site em 40% através de otimização de código.",
     order: 2
   });
 
   await storage.createExperience({
-    role: "Junior Web Developer",
+    role: "Desenvolvedor Web Júnior",
     company: "StartUp Co.",
     period: "2018 - 2019",
-    description: "Assisted in the development of the company's main product. Implemented new features and fixed bugs in the React codebase.",
+    description: "Auxílio no desenvolvimento do produto principal da empresa. Implementação de novas funcionalidades e correção de bugs na base de código React.",
     order: 3
   });
 }

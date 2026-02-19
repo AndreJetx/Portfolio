@@ -12,9 +12,9 @@ export default function Projects() {
     <PageTransition>
       <div className="max-w-6xl mx-auto px-6 py-12 md:py-20 space-y-12">
         <div className="space-y-4">
-          <h2 className="font-display text-4xl font-bold">Featured Projects</h2>
+          <h2 className="font-display text-4xl font-bold">Projetos em Destaque</h2>
           <p className="text-muted-foreground text-lg max-w-2xl">
-            A collection of applications that showcase my passion for clean code and user-centric design.
+            Uma coleção de aplicações que demonstram minha paixão por código limpo e design centrado no usuário.
           </p>
         </div>
 
