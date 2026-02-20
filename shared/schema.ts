@@ -39,15 +39,36 @@ export const messages = pgTable("messages", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
   email: text("email").notNull(),
+  phone: text("phone"),
   message: text("message").notNull(),
   createdAt: timestamp("created_at").defaultNow(),
 });
 
+// === PROFILE (single row: avatar, name, title, social links, contato) ===
+export const profile = pgTable("profile", {
+  id: serial("id").primaryKey(),
+  avatarUrl: text("avatar_url"),
+  name: text("name").notNull(),
+  title: text("title").notNull(),
+  githubUrl: text("github_url"),
+  linkedinUrl: text("linkedin_url"),
+  twitterUrl: text("twitter_url"),
+  contactEmail: text("contact_email"),
+  contactLocation: text("contact_location"),
+  contactPhone: text("contact_phone"),
+  updatedAt: timestamp("updated_at").defaultNow(),
+});
+
 // === SCHEMAS ===
 export const insertProjectSchema = createInsertSchema(projects).omit({ id: true, createdAt: true });
+export const updateProjectSchema = insertProjectSchema.partial();
 export const insertSkillSchema = createInsertSchema(skills).omit({ id: true });
+export const updateSkillSchema = insertSkillSchema.partial();
 export const insertExperienceSchema = createInsertSchema(experience).omit({ id: true });
+export const updateExperienceSchema = insertExperienceSchema.partial();
 export const insertMessageSchema = createInsertSchema(messages).omit({ id: true, createdAt: true });
+export const insertProfileSchema = createInsertSchema(profile).omit({ id: true, updatedAt: true });
+export const updateProfileSchema = insertProfileSchema.partial();
 
 // === TYPES ===
 export type Project = typeof projects.$inferSelect;
@@ -61,3 +82,6 @@ export type InsertExperience = z.infer<typeof insertExperienceSchema>;
 
 export type Message = typeof messages.$inferSelect;
 export type InsertMessage = z.infer<typeof insertMessageSchema>;
+
+export type Profile = typeof profile.$inferSelect;
+export type InsertProfile = z.infer<typeof insertProfileSchema>;

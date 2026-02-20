@@ -1,10 +1,12 @@
 import { PageTransition } from "@/components/layout/PageTransition";
 import { useExperience } from "@/hooks/use-portfolio";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Briefcase, Calendar } from "lucide-react";
 
 export default function Experience() {
   const { data: experience, isLoading } = useExperience();
+  const { t } = useLanguage();
 
   // Sort by order or date if available
   const sortedExperience = experience?.sort((a, b) => a.order - b.order);
@@ -13,9 +15,9 @@ export default function Experience() {
     <PageTransition>
       <div className="max-w-4xl mx-auto px-6 py-12 md:py-20 space-y-12">
         <div className="space-y-4">
-          <h2 className="font-display text-4xl font-bold">Experiência</h2>
+          <h2 className="font-display text-4xl font-bold">{t.experience.title}</h2>
           <p className="text-muted-foreground text-lg max-w-2xl">
-            Minha jornada profissional e os cargos que ocupei na indústria.
+            {t.experience.subtitle}
           </p>
         </div>
 

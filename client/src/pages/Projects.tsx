@@ -1,5 +1,6 @@
 import { PageTransition } from "@/components/layout/PageTransition";
 import { useProjects } from "@/hooks/use-portfolio";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { ExternalLink, Github, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -7,14 +8,15 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 export default function Projects() {
   const { data: projects, isLoading } = useProjects();
+  const { t } = useLanguage();
 
   return (
     <PageTransition>
       <div className="max-w-6xl mx-auto px-6 py-12 md:py-20 space-y-12">
         <div className="space-y-4">
-          <h2 className="font-display text-4xl font-bold">Projetos em Destaque</h2>
+          <h2 className="font-display text-4xl font-bold">{t.projects.title}</h2>
           <p className="text-muted-foreground text-lg max-w-2xl">
-            Uma coleção de aplicações que demonstram minha paixão por código limpo e design centrado no usuário.
+            {t.projects.subtitle}
           </p>
         </div>
 
@@ -80,16 +82,16 @@ export default function Projects() {
 
                   <div className="mt-auto pt-6 flex items-center gap-3">
                     {project.demoUrl && (
-                      <Button asChild size="sm" className="rounded-full px-4 h-9 bg-white text-black hover:bg-white/90">
+                      <Button asChild size="sm" className="rounded-full px-4 h-9 bg-primary text-primary-foreground hover:opacity-90">
                         <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-                          Live Demo <ExternalLink className="ml-2 h-3 w-3" />
+                          {t.projects.liveDemo} <ExternalLink className="ml-2 h-3 w-3" />
                         </a>
                       </Button>
                     )}
                     {project.githubUrl && (
-                      <Button asChild variant="outline" size="sm" className="rounded-full px-4 h-9 border-white/10 hover:bg-white/5">
+                      <Button asChild variant="outline" size="sm" className="rounded-full px-4 h-9 border-border hover:bg-muted">
                         <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                          <Github className="mr-2 h-3 w-3" /> Source
+                          <Github className="mr-2 h-3 w-3" /> {t.projects.source}
                         </a>
                       </Button>
                     )}

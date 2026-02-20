@@ -1,6 +1,26 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { api, type InsertMessage } from "@shared/routes";
 import { useToast } from "@/hooks/use-toast";
+import type { Profile } from "@shared/schema";
+
+// ============================================
+// PROFILE
+// ============================================
+
+export function useProfile() {
+  return useQuery({
+    queryKey: [api.profile.get.path],
+    queryFn: async () => {
+      const res = await fetch(api.profile.get.path);
+      if (!res.ok) throw new Error("Failed to fetch profile");
+      const data = await res.json();
+      return data as Profile;
+    },
+    staleTime: 0,
+    refetchOnMount: true,
+    refetchOnWindowFocus: true,
+  });
+}
 
 // ============================================
 // PROJECTS
@@ -78,24 +98,24 @@ export function useContact() {
       if (!res.ok) {
         if (res.status === 400) {
           const error = await res.json();
-          throw new Error(error.message || "Validation failed");
+          throw new Error(error.message || "Verifique os dados e tente novamente.");
         }
-        throw new Error("Failed to send message");
+        throw new Error("Falha ao enviar a mensagem.");
       }
       
       return api.contact.submit.responses[201].parse(await res.json());
     },
     onSuccess: () => {
       toast({
-        title: "Message Sent!",
-        description: "Thanks for reaching out. I'll get back to you soon.",
+        title: "Mensagem enviada!",
+        description: "Obrigado pelo contato. Responderei em breve.",
         variant: "default",
       });
     },
     onError: (error) => {
       toast({
-        title: "Error",
-        description: error.message || "Failed to send message. Please try again.",
+        title: "Erro",
+        description: (error as Error).message || "Falha ao enviar a mensagem. Tente novamente.",
         variant: "destructive",
       });
     }

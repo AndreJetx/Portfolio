@@ -1,5 +1,6 @@
 import { PageTransition } from "@/components/layout/PageTransition";
 import { useSkills } from "@/hooks/use-portfolio";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Skeleton } from "@/components/ui/skeleton";
 import { 
   Code2, 
@@ -10,6 +11,18 @@ import {
   Cloud
 } from "lucide-react";
 import * as SimpleIcons from "react-icons/si";
+
+// Aliases para nomes que podem estar no banco (ex: SiAmazonaws → SiAmazonwebservices)
+const ICON_ALIASES: Record<string, string> = {
+  SiAmazonaws: "SiAmazonwebservices",
+};
+
+const getTechIcon = (iconName: string) => {
+  const name = iconName ? (ICON_ALIASES[iconName] || iconName) : "";
+  const IconComponent = name ? (SimpleIcons as Record<string, React.ComponentType<{ className?: string }>>)[name] : null;
+  if (!IconComponent) return null;
+  return <IconComponent className="w-8 h-8" />;
+};
 
 const getIcon = (category: string) => {
   switch(category.toLowerCase()) {
@@ -22,14 +35,9 @@ const getIcon = (category: string) => {
   }
 };
 
-const getTechIcon = (iconName: string) => {
-  const IconComponent = (SimpleIcons as any)[iconName];
-  if (!IconComponent) return null;
-  return <IconComponent className="w-8 h-8" />;
-};
-
 export default function Skills() {
   const { data: skills, isLoading } = useSkills();
+  const { t } = useLanguage();
 
   // Group skills by category
   const categories = skills?.reduce((acc, skill) => {
@@ -42,9 +50,9 @@ export default function Skills() {
     <PageTransition>
       <div className="max-w-5xl mx-auto px-6 py-12 md:py-20 space-y-12">
         <div className="space-y-4">
-          <h2 className="font-display text-4xl font-bold">Habilidades Técnicas</h2>
+          <h2 className="font-display text-4xl font-bold">{t.skills.title}</h2>
           <p className="text-muted-foreground text-lg max-w-2xl">
-            Uma visão geral das tecnologias e ferramentas que utilizo no meu dia a dia como desenvolvedor.
+            {t.skills.subtitle}
           </p>
         </div>
 

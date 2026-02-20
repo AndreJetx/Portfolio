@@ -50,6 +50,9 @@ export const api = {
       },
     },
   },
+  profile: {
+    get: { method: 'GET' as const, path: '/api/profile' as const },
+  },
   contact: {
     submit: {
       method: 'POST' as const,
@@ -60,6 +63,19 @@ export const api = {
         400: errorSchemas.validation,
       },
     },
+  },
+  admin: {
+    login: { method: 'POST' as const, path: '/api/admin/login' as const },
+    logout: { method: 'POST' as const, path: '/api/admin/logout' as const },
+    me: { method: 'GET' as const, path: '/api/admin/me' as const },
+    projects: { path: '/api/admin/projects' as const },
+    project: (id: number) => `/api/admin/projects/${id}` as const,
+    skills: { path: '/api/admin/skills' as const },
+    skill: (id: number) => `/api/admin/skills/${id}` as const,
+    experience: { path: '/api/admin/experience' as const },
+    experienceItem: (id: number) => `/api/admin/experience/${id}` as const,
+    messages: { path: '/api/admin/messages' as const },
+    profile: { path: '/api/admin/profile' as const },
   },
 };
 

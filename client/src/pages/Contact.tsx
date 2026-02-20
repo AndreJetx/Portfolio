@@ -1,5 +1,6 @@
 import { PageTransition } from "@/components/layout/PageTransition";
-import { useContact } from "@/hooks/use-portfolio";
+import { useContact, useProfile } from "@/hooks/use-portfolio";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -18,13 +19,16 @@ import {
 } from "@/components/ui/form";
 
 export default function Contact() {
+  const { data: profile } = useProfile();
   const mutation = useContact();
+  const { t } = useLanguage();
   
   const form = useForm<z.infer<typeof insertMessageSchema>>({
     resolver: zodResolver(insertMessageSchema),
     defaultValues: {
       name: "",
       email: "",
+      phone: "",
       message: "",
     },
   });
@@ -45,47 +49,48 @@ export default function Contact() {
           {/* Left Column: Info */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="font-display text-4xl font-bold">Entre em Contato</h2>
+              <h2 className="font-display text-4xl font-bold">{t.contact.title}</h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades para fazer parte da sua visão.
+                {t.contact.subtitle}
               </p>
             </div>
 
             <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-white/5 rounded-xl border border-white/5">
-                  <Mail className="w-6 h-6 text-primary" />
+              {(profile?.contactEmail ?? "").trim() && (
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-white/5 rounded-xl border border-white/5">
+                    <Mail className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-foreground mb-1">{t.contact.email}</h3>
+                    <a href={`mailto:${profile?.contactEmail?.trim()}`} className="text-muted-foreground hover:text-white transition-colors">
+                      {profile?.contactEmail?.trim()}
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-bold text-white mb-1">E-mail</h3>
-                  <a href="mailto:hello@alex.design" className="text-muted-foreground hover:text-white transition-colors">
-                    hello@alex.design
-                  </a>
+              )}
+              {(profile?.contactLocation ?? "").trim() && (
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-white/5 rounded-xl border border-white/5">
+                    <MapPin className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-foreground mb-1">{t.contact.location}</h3>
+                    <p className="text-muted-foreground whitespace-pre-line">{profile?.contactLocation?.trim()}</p>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-white/5 rounded-xl border border-white/5">
-                  <MapPin className="w-6 h-6 text-primary" />
+              )}
+              {(profile?.contactPhone ?? "").trim() && (
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-white/5 rounded-xl border border-white/5">
+                    <Phone className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-foreground mb-1">{t.contact.phone}</h3>
+                    <p className="text-muted-foreground">{profile?.contactPhone?.trim()}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-bold text-white mb-1">Localização</h3>
-                  <p className="text-muted-foreground">
-                    São Paulo, SP<br />
-                    Disponível para Remoto
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-white/5 rounded-xl border border-white/5">
-                  <Phone className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-white mb-1">Telefone</h3>
-                  <p className="text-muted-foreground">+55 (11) 99999-9999</p>
-                </div>
-              </div>
+              )}
             </div>
           </div>
 
@@ -99,10 +104,10 @@ export default function Contact() {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <Label className="text-xs uppercase tracking-wide font-bold text-muted-foreground ml-1">Nome</Label>
+                        <Label className="text-xs uppercase tracking-wide font-bold text-muted-foreground ml-1">{t.contact.name}</Label>
                         <FormControl>
                           <Input 
-                            placeholder="Seu nome" 
+                            placeholder={t.contact.namePlaceholder} 
                             {...field} 
                             className="bg-black/20 border-white/10 focus:border-primary/50 focus:bg-black/40 h-12 rounded-xl transition-all"
                           />
@@ -116,10 +121,10 @@ export default function Contact() {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <Label className="text-xs uppercase tracking-wide font-bold text-muted-foreground ml-1">E-mail</Label>
+                        <Label className="text-xs uppercase tracking-wide font-bold text-muted-foreground ml-1">{t.contact.email}</Label>
                         <FormControl>
                           <Input 
-                            placeholder="seu@email.com" 
+                            placeholder={t.contact.emailPlaceholder} 
                             {...field} 
                             className="bg-black/20 border-white/10 focus:border-primary/50 focus:bg-black/40 h-12 rounded-xl transition-all"
                           />
@@ -132,13 +137,32 @@ export default function Contact() {
 
                 <FormField
                   control={form.control}
+                  name="phone"
+                  render={({ field }) => (
+                    <FormItem>
+                      <Label className="text-xs uppercase tracking-wide font-bold text-muted-foreground ml-1">{t.contact.phone}</Label>
+                      <FormControl>
+                        <Input 
+                          type="tel"
+                          placeholder={t.contact.phonePlaceholder} 
+                          {...field} 
+                          className="bg-black/20 border-white/10 focus:border-primary/50 focus:bg-black/40 h-12 rounded-xl transition-all"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <Label className="text-xs uppercase tracking-wide font-bold text-muted-foreground ml-1">Mensagem</Label>
-                      <FormControl>
-                        <Textarea 
-                          placeholder="Conte-me sobre seu projeto..." 
+                        <Label className="text-xs uppercase tracking-wide font-bold text-muted-foreground ml-1">{t.contact.message}</Label>
+                        <FormControl>
+                          <Textarea 
+                            placeholder={t.contact.messagePlaceholder}
                           {...field} 
                           className="bg-black/20 border-white/10 focus:border-primary/50 focus:bg-black/40 min-h-[150px] rounded-xl resize-none transition-all"
                         />
@@ -153,9 +177,9 @@ export default function Contact() {
                   disabled={mutation.isPending}
                   className="w-full h-14 text-lg font-semibold rounded-xl bg-gradient-to-r from-primary to-blue-600 hover:opacity-90 transition-all shadow-lg shadow-primary/20"
                 >
-                  {mutation.isPending ? "Enviando..." : (
+                  {mutation.isPending ? t.contact.sending : (
                     <>
-                      Enviar Mensagem <Send className="ml-2 w-5 h-5" />
+                      {t.contact.send} <Send className="ml-2 w-5 h-5" />
                     </>
                   )}
                 </Button>
