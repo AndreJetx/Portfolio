@@ -45,7 +45,7 @@ export default function HomePage() {
         <div className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-4">
           <StatCard icon={<Terminal className="h-5 w-5 text-blue-400" />} label={t.home.frontend} value="React & TS" />
           <StatCard icon={<Database className="h-5 w-5 text-green-400" />} label={t.home.backend} value="Node & PG" />
-          <StatCard icon={<Palette className="h-5 w-5 text-purple-400" />} label={t.home.design} value="Tailwind" />
+          <StatCard icon={<Palette className="h-5 w-5 text-purple-400" />} label={t.home.design} value="Tailwind & Sass" />
           <StatCard icon={<Cpu className="h-5 w-5 text-orange-400" />} label={t.home.devops} value="Docker" />
         </div>
       </div>
