@@ -1,0 +1,10 @@
+node_modules
+dist
+.DS_Store
+*.tar.gz
+.env
+
+# Next.js
+.next/
+out/
+next-env.d.ts
