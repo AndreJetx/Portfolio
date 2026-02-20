@@ -3,7 +3,7 @@ import "./globals.css";
 import { Providers } from "@/components/Providers";
 
 export const metadata: Metadata = {
-  title: "Portfólio",
+  title: "André Juan - Portfólio",
   description: "Portfólio profissional",
   icons: {
     icon: "/favicon.png",
