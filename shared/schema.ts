@@ -58,6 +58,7 @@ export const profile = pgTable("profile", {
   contactPhone: text("contact_phone"),
   cvUrl: text("cv_url"),
   showCvButton: boolean("show_cv_button").default(true),
+  showExperience: boolean("show_experience").default(true),
   updatedAt: timestamp("updated_at").defaultNow(),
 });
 

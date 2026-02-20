@@ -290,7 +290,7 @@ export function useAdminProfile() {
   });
 
   const update = useMutation({
-    mutationFn: async (data: Partial<Pick<Profile, "avatarUrl" | "name" | "title" | "githubUrl" | "linkedinUrl" | "twitterUrl" | "contactEmail" | "contactLocation" | "contactPhone" | "cvUrl" | "showCvButton">>) => {
+    mutationFn: async (data: Partial<Pick<Profile, "avatarUrl" | "name" | "title" | "githubUrl" | "linkedinUrl" | "twitterUrl" | "contactEmail" | "contactLocation" | "contactPhone" | "cvUrl" | "showCvButton" | "showExperience">>) => {
       const res = await adminFetch(api.admin.profile.path, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },

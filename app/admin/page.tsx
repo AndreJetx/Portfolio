@@ -354,6 +354,7 @@ function AdminProfileTab() {
   const [contactPhone, setContactPhone] = useState("");
   const [cvUrl, setCvUrl] = useState("");
   const [showCvButton, setShowCvButton] = useState(true);
+  const [showExperience, setShowExperience] = useState(true);
 
   useEffect(() => {
     if (profile) {
@@ -368,6 +369,7 @@ function AdminProfileTab() {
       setContactPhone(profile.contactPhone ?? "");
       setCvUrl(profile.cvUrl ?? "");
       setShowCvButton(profile.showCvButton ?? true);
+      setShowExperience(profile.showExperience ?? true);
     }
   }, [profile]);
 
@@ -385,6 +387,7 @@ function AdminProfileTab() {
       contactPhone: contactPhone || undefined,
       cvUrl: cvUrl || undefined,
       showCvButton,
+      showExperience,
     });
   };
 
@@ -453,6 +456,15 @@ function AdminProfileTab() {
             <div>
               <Label className="text-xs text-muted-foreground">URL do PDF do currículo</Label>
               <Input value={cvUrl} onChange={(e) => setCvUrl(e.target.value)} placeholder="https://... ou deixe em branco e use public/cv.pdf" />
+            </div>
+          </div>
+        </div>
+        <div className="pt-2 border-t border-white/10">
+          <Label className="text-muted-foreground">Menu de navegação</Label>
+          <div className="mt-3">
+            <div className="flex items-center gap-2">
+              <Switch checked={showExperience} onCheckedChange={setShowExperience} />
+              <Label className="text-sm">Exibir menu &quot;Experiências&quot; na sidebar</Label>
             </div>
           </div>
         </div>

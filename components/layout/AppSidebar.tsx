@@ -71,7 +71,10 @@ export function AppSidebar() {
   const { theme, setTheme } = useTheme();
   const { locale, setLocale, t } = useLanguage();
   const isDark = theme === "dark";
-  const items = navKeys.map(({ key, url, icon }) => ({ title: t.nav[key as keyof typeof t.nav], url, icon }));
+  const showExperience = profile?.showExperience !== false;
+  const items = navKeys
+    .filter(({ key }) => key !== "experience" || showExperience)
+    .map(({ key, url, icon }) => ({ title: t.nav[key as keyof typeof t.nav], url, icon }));
 
   return (
     <Sidebar className="border-r border-border bg-sidebar/95 backdrop-blur supports-[backdrop-filter]:bg-sidebar/60">

@@ -48,6 +48,7 @@ function profileToCamel(row: Record<string, unknown> | undefined) {
     contactPhone: r.contactPhone ?? r.contact_phone ?? null,
     cvUrl: r.cvUrl ?? r.cv_url ?? null,
     showCvButton: r.showCvButton ?? r.show_cv_button ?? true,
+    showExperience: r.showExperience ?? r.show_experience ?? true,
     updatedAt: r.updatedAt ?? r.updated_at ?? null,
   };
 }
